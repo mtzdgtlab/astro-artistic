@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import embroidery1 from '../assets/images/footer/embroidery-1.jpg';
+import embroidery2 from '../assets/images/footer/embroidery-2.jpg';
+import screenprinting1 from '../assets/images/footer/screenprinting-1.jpg';
+import screenprinting2 from '../assets/images/footer/screenprinting-2.jpg';
+import dtf1 from '../assets/images/footer/dtf-1.jpg';
+
+const footerImages = [
+  { src: dtf1, label: 'DTF Work', href: '/dtf.html' },
+  { src: embroidery1, label: 'Embroidery', href: '/embroidery.html' },
+  { src: embroidery2, label: 'Embroidery', href: '/embroidery.html' },
+  { src: screenprinting1, label: 'Screen Printing', href: '/screen-printing.html' },
+  { src: screenprinting2, label: 'Screen Printing', href: '/screen-printing.html' }
+];
+---
+
+<!-- Footer Top Start -->
+<div class="footer-top pt-40 pb-40">
+  <div class="container">
+    <h2 class="visually-hidden">Footer Project Gallery</h2>
+    <div class="footer-top-projects">
+      {footerImages.map((item, i) => (
+        <div class={`footer-project-item wow fadeInUp delay-0-${2 + i}s`} role="option" aria-selected="false">
+          <Image src={item.src} alt={item.label} loading="lazy" />
+          <div class="content">
+            <h6><a href={item.href} aria-label={`View project: ${item.label}`}>{item.label}</a></h6>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- Footer Top End -->

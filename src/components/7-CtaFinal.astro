@@ -1,0 +1,68 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<!-- CTA Area start -->
+<section class="cta-area bgc-black">
+  <div class="container-1450">
+    <div class="row justify-content-around">
+      <div class="col-xl-4 align-self-center">
+        <div class="cta-left-image mt-50 rel z-1 wow fadeInLeft delay-0-4s">
+          <Image 
+            src="/assets/images/cta/cta-left.png" 
+            alt="CTA Left" 
+            loading="lazy" 
+            layout="constrained" 
+            width={500} 
+            height={400} 
+          />
+          <div class="circle-square circle-blue">
+            <div class="shape-inner">
+              <span class="dot-one"></span>
+              <span class="dot-two"></span>
+              <span class="dot-three"></span>
+              <span class="dot-four"></span>
+              <span class="dot-five"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4 align-self-center">
+        <div class="cta-content text-center py-55 wow fadeInUp delay-0-2s">
+          <span class="sub-title-two mb-25">Let’s Create Something Unique</span>
+          <div class="section-title text-white-title mb-50">
+            <h2>Custom Embroidery <br /> Tailored to Your Brand</h2>
+          </div>
+          <h3 class="visually-hidden">Embroidery quote section</h3>
+          <a href="https://wa.me/18622764283" target="_blank" rel="noopener" class="theme-btn" aria-label="Request a custom embroidery quote via WhatsApp">
+            Request a Quote <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 mb-50 align-self-center d-none d-xl-block">
+        <div class="cta-right-image rel z-1 wow fadeInLeft delay-0-4s">
+          <Image 
+            src="/assets/images/cta/cta-right.png" 
+            alt="CTA Right" 
+            loading="lazy" 
+            layout="constrained" 
+            width={500} 
+            height={400} 
+          />
+          <div class="circle-square circle-yellow">
+            <div class="shape-inner">
+              <span class="dot-one"></span>
+              <span class="dot-two"></span>
+              <span class="dot-three"></span>
+              <span class="dot-four"></span>
+              <span class="dot-five"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CTA Area end -->
+</section>

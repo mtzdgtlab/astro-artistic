@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<!-- CTA Two Area start -->
+<section class="cta-two-area bgc-black" aria-labelledby="cta-two-heading">
+  <div class="container-fluid mt-50 mb-150">
+    <div class="row justify-content-around">
+      <div class="col-xl-5 col-lg-5 col-md-6 align-self-center order-2 order-md-1">
+        <div class="cta-two-content rel z-1 pt-50 pb-55 wow fadeInLeft delay-0-2s">
+          <span class="sub-title-two mb-30">Get in Touch</span>
+          <div class="section-title text-white-title mb-30">
+            <h2 id="cta-two-heading" aria-label="Looking for a Branding Solution for Your Business?">Looking for a Branding Solution for Your Business?</h2>
+          </div>
+          <a href="https://wa.me/18622764283" target="_blank" rel="noopener" class="theme-btn style-two mt-60 mb-60" aria-label="Start your project now via WhatsApp">
+            Start Your Project Now <i class="fas fa-arrow-right"></i>
+          </a>
+          <h3 class="visually-hidden" role="heading" aria-level="3" aria-label="Key business benefits">Key business benefits</h3>
+          <ul class="list-style-one text-white">
+            <li>Over 10 Years of Experience</li>
+            <li>Personalized Customer Service</li>
+            <li>Extended Business Hours</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xl-7 col-lg-7 col-md-6 align-self-center order-1 order-md-2">
+        <div class="cta-two-image rel z-1 wow fadeInRight delay-0-2s">
+          <Image
+            src="/assets/images/cta/cta-two.png"
+            alt="Illustration representing a business branding solution and call to action"
+            layout="constrained"
+            width={700}
+            height={500}
+          />
+          <div class="circle-square circle-yellow">
+            <div class="shape-inner">
+              <span class="dot-one"></span>
+              <span class="dot-two"></span>
+              <span class="dot-three"></span>
+              <span class="dot-four"></span>
+              <span class="dot-five"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CTA Two Area end -->

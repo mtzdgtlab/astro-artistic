@@ -1,0 +1,74 @@
+---
+import '../styles/style.css';
+import NavbarDos from '../components/1-NavbarDos.astro';
+import Hero from '../components/2-Hero.astro';
+import About from '../components/3-About.astro';
+import Services from '../components/4-Services.astro';
+import CtaTwo from '../components/5-CtaTwo.astro';
+import FaqSection from '../components/6-FaqSection.astro';
+import CtaFinal from '../components/7-CtaFinal.astro';
+import FooterTop from '../components/8-FooterTop.astro';
+import Footer from '../components/8-Footer.astro';
+import Scripts from '../components/9-Scripts.astro';
+
+// Import local CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'magnific-popup/dist/magnific-popup.css';
+import 'jquery-nice-select/css/nice-select.css';
+import 'jquery-ui/dist/themes/base/jquery-ui.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Artistic Embroidery and Screen Printing Services</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Professional embroidery and screen printing services for all your custom apparel needs. Quality workmanship and exceptional customer service." />
+    <meta name="keywords" content="embroidery, screen printing, custom apparel, t-shirts, uniforms, promotional items" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Artistic Embroidery and Screen Printing Services" />
+    <meta property="og:description" content="Professional embroidery and screen printing services for all your custom apparel needs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://artisticembr.com" />
+    <meta property="og:image" content="https://artisticembr.com/og-image.jpg" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Artistic Embroidery and Screen Printing Services" />
+    <meta name="twitter:description" content="Professional embroidery and screen printing services for all your custom apparel needs." />
+    <meta name="twitter:image" content="https://artisticembr.com/og-image.jpg" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader"></div>
+    <!-- preloader area end -->
+    <div class="page-wrapper">
+      <!-- Back to Top -->
+      <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+      </div>
+
+      <NavbarDos />
+      <Hero />
+      <About />
+      <Services />
+      <CtaTwo />
+      <FaqSection />
+      <CtaFinal />
+      <FooterTop />
+      <Footer />
+      <Scripts />
+    </div>
+  </body>
+</html>

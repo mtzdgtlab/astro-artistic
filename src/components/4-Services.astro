@@ -1,0 +1,142 @@
+---
+import { Image } from 'astro:assets';
+import embroideryImg from '../assets/images/services/service-two-3.png';
+import screenPrintImg from '../assets/images/services/service-two-2.png';
+import offsetPrintImg from '../assets/images/services/service-two-1.png';
+---
+
+<!-- Services two start -->
+<section class="services-two-area pt-80 pb-130" aria-labelledby="services-heading">
+  <div class="container-fluid">
+    <div class="row justify-content-around text-center mb-25">
+      <div class="col-xl-11 col-lg-11 text-center mb-55 wow fadeInUp delay-0-2s">
+        <span class="sub-title mb-25">Our Expertise</span>
+        <div class="section-title">
+          <h2 id="services-heading">Our Core Printing and Design Services</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-tab-area">
+      <div class="tab-btns-one nav nav-fill nav-pills wow fadeInUp delay-0-3s">
+        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#service-tab-one" aria-label="Embroidery Services Tab">
+          <i class="flaticon-logo"></i>
+          <span class="title">Embroidery Services</span>
+        </button>
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#service-tab-two" aria-label="Screen Printing Tab">
+          <i class="flaticon-t-shirt"></i>
+          <span class="title">Screen Printing</span>
+        </button>
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#service-tab-three" aria-label="Offset Printing Tab">
+          <i class="flaticon-printer"></i>
+          <span class="title">Offset Printing</span>
+        </button>
+      </div>
+
+      <div class="tab-content">
+        <!-- Tab 1 -->
+        <div class="tab-pane fade show active" id="service-tab-one">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="service-two-image rmb-55 wow fadeInUp delay-0-2s">
+                <Image
+                  src={embroideryImg}
+                  alt="Example of professional embroidery services"
+                  width={600}
+                  height={450}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="service-two-content wow fadeInUp delay-0-4s" aria-labelledby="embroidery-heading">
+                  <h3 id="embroidery-heading-1">Professional Embroidery Services</h3>
+                <p>
+                  Enhance your garments and accessories with our high-quality embroidery solutions. We offer custom
+                  designs, logos, and monograms with precision and durability.
+                </p>
+                <ul class="list-style-one text-dark">
+                  <li>Custom Logo Embroidery</li>
+                  <li>Personalized Monograms</li>
+                  <li>Uniform & Apparel Embroidery</li>
+                </ul>
+                <a href="/embroidery.html" class="theme-btn style-two mt-35" aria-label="Learn more about embroidery services">
+                  Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2 -->
+        <div class="tab-pane fade" id="service-tab-two">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="service-two-image rmb-55">
+                <Image
+                  src={screenPrintImg}
+                  alt="Example of expert screen printing services"
+                  width={600}
+                  height={450}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="service-two-content" aria-labelledby="screen-printing-heading">
+                  <h3 id="screen-printing-heading">Expert Screen Printing</h3>
+                <p>
+                  Bring your ideas to life with vibrant and long-lasting screen printing. Perfect for t-shirts, bags,
+                  and promotional items in any quantity.
+                </p>
+                <ul class="list-style-one text-dark">
+                  <li>T-shirt & Apparel Printing</li>
+                  <li>Promotional Product Printing</li>
+                  <li>Multi-Color Designs</li>
+                </ul>
+                <a href="/screen-printing.html" class="theme-btn style-two mt-35" aria-label="Learn more about screen printing services">
+                  Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3 -->
+        <div class="tab-pane fade" id="service-tab-three">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="service-two-image rmb-55">
+                <Image
+                  src={offsetPrintImg}
+                  alt="Example of high-quality offset printing services"
+                  width={600}
+                  height={450}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="service-two-content" aria-labelledby="offset-printing-heading">
+                <h3 id="offset-printing-heading">High-Quality Offset Printing</h3>
+                <p>
+                  Get sharp, professional results for all your business and marketing needs. Our offset printing is
+                  ideal for brochures, business cards, and more.
+                </p>
+                <ul class="list-style-one text-dark">
+                  <li>Brochure & Flyer Printing</li>
+                  <li>Business Card Printing</li>
+                  <li>Banners</li>
+                </ul>
+                <a href="/printing.html" class="theme-btn style-two mt-35" aria-label="Learn more about offset printing services">
+                  Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services two end -->

@@ -1,0 +1,165 @@
+---
+import '../styles/style.css';
+import NavbarDos from '../components/1-NavbarDos.astro';
+import CtaFinal from '../components/7-CtaFinal.astro';
+import Footer from '../components/8-Footer.astro';
+import Scripts from '../components/9-Scripts.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Business Cards | Artistic Embroidery</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/flaticon.min.css" />
+    <link rel="stylesheet" href="/assets/css/slick.min.css" />
+  </head>
+  <body>
+    <div class="preloader" id="preloader"></div>
+    <div class="page-wrapper">
+      <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+      </div>
+
+      <NavbarDos />
+
+      <!-- Page Banner Start -->
+      <section
+        class="page-banner bgs-cover text-white pt-65 pb-75"
+        style="background-image: url(assets/images/banner.jpg);"
+      >
+        <div class="container">
+          <div class="banner-inner">
+            <h1 class="page-title wow fadeInUp delay-0-2s">Postcards</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active">/ Printing / Offset Printing / Postcards</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- Page Banner End -->
+
+      <!-- Product Details Start -->
+      <section class="product-details pt-130 rpt-100">
+        <div class="container">
+          <div class="row align-items-center align-items-lg-start">
+            <div class="col-lg-5 col-9">
+              <div class="tab-content preview-images rmb-50 wow fadeInLeft delay-0-2s">
+                <div class="tab-pane fade preview-item active show" id="preview1">
+                  <img src="assets/images/preview/postcards-1.png" alt="Postcards imprimex" />
+                </div>
+                <div class="tab-pane fade preview-item" id="preview2">
+                  <img src="assets/images/preview/postcards-2.png" alt="Postcards imprimex" />
+                </div>
+                <div class="tab-pane fade preview-item" id="preview3">
+                  <img src="assets/images/preview/postcards-3.png" alt="Postcards imprimex" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-3">
+              <div class="nav flex-column thumb-images rmb-20">
+                <a href="#preview1" data-bs-toggle="tab" class="thumb-item active show">
+                  <img src="assets/images/products/postcards-1.png" alt="Postcards imprimex" />
+                </a>
+                <a href="#preview2" data-bs-toggle="tab" class="thumb-item">
+                  <img src="assets/images/products/postcards-2.png" alt="Postcards imprimex" />
+                </a>
+                <a href="#preview3" data-bs-toggle="tab" class="thumb-item">
+                  <img src="assets/images/products/postcards-3.png" alt="Postcards imprimex" />
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="product-details-content wow fadeInRight delay-0-2s">
+                <div class="section-title">
+                  <h2>Postcards</h2>
+                </div>
+                <hr class="mb-25" />
+                <p>
+                  Printed on premium quality card stock, Postcards are a durable, versatile tool for attracting new
+                  business, promoting new deals, and keeping in touch with clients. Stand out in the mail with our
+                  next-level range of sizes, stocks and finishes—including the radiance of Majestic options.
+                </p>
+                <hr class="mt-30" />
+                <hr />
+              </div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs product-information-tab mt-80 mb-40 wow fadeInUp delay-0-2s">
+            <li><a href="#description" data-bs-toggle="tab" class="active show">Description</a></li>
+            <li><a href="#idealUses" data-bs-toggle="tab">Uses</a></li>
+          </ul>
+          <div class="tab-content pb-50 wow fadeInUp delay-0-2s">
+            <div class="tab-pane fade active show" id="description">
+              <p><strong>📌 About Postcards</strong></p>
+              <p>
+                Postcards are more than just paper — they’re compact, impactful messengers for your brand. At Artistic
+                Embroidery, we produce high-quality postcards on **premium card stock** that delivers bold color, sharp
+                detail, and a professional finish.
+              </p>
+              <p>
+                Whether you're launching a campaign, announcing a promotion, or staying top of mind with customers,
+                postcards offer a **cost-effective way to make a personal impression**. With options ranging from
+                standard matte to our stunning Majestic finishes, your design can truly stand out — and stay in hand
+                longer.
+              </p>
+              <p>
+                Each piece is designed to endure mailing, handling, and display without bending or fading — making sure
+                your message arrives as strong as it left.
+              </p>
+              <ul class="list-style-one mt-25 mb-25">
+                <li>Printed on thick, durable cardstock</li>
+                <li>Full-color front and optional back designs</li>
+                <li>Available in multiple sizes and finishes</li>
+                <li>Great for direct mail, handouts, or packaging inserts</li>
+                <li>Elegant upgrades available with Majestic foil, spot UV, or silk touch</li>
+              </ul>
+              <p>
+                A well-designed postcard isn’t just marketing — it’s a lasting connection between your business and your
+                audience.
+              </p>
+            </div>
+
+            <div class="tab-pane fade" id="idealUses">
+              <p><strong>🎯 Ideal Uses — Where Postcards Work Best</strong></p>
+              <p>
+                Postcards are perfect for anyone who wants to deliver a message that sticks — in hand, on the fridge, or
+                in memory.
+              </p>
+              <ul class="list-style-one mt-25 mb-25">
+                <li><strong>Bankers & Financial Services:</strong> Statement inserts, announcements, and updates</li>
+                <li><strong>Retail:</strong> Sales flyers, discount cards, and loyalty promos</li>
+                <li><strong>Real Estate:</strong> Open house invites and "Just Sold" mailers</li>
+                <li><strong>Education:</strong> Enrollment drives, class reminders, event promotion</li>
+                <li><strong>Non-Profits:</strong> Fundraising appeals and thank-you messages</li>
+                <li><strong>Contractors:</strong> Local mail campaigns and referral offers</li>
+              </ul>
+              <p>
+                If you’re looking for a physical marketing tool that’s quick to produce, affordable to print, and easy
+                to distribute — postcards deliver every time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Product Details End -->
+
+      <CtaFinal />
+      <Footer />
+      <Scripts />
+    </div>
+  </body>
+</html>

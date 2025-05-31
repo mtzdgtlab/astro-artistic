@@ -1,0 +1,62 @@
+---
+import '../../styles/style.css';
+import services from '../../data/services.json';
+import NavbarDos from '../../components/1-NavbarDos.astro';
+import ServiceDetails from '../../components/15-ServiceDetails.astro';
+import CtaFinal from '../../components/7-CtaFinal.astro';
+import Footer from '../../components/8-Footer.astro';
+import Scripts from '../../components/9-Scripts.astro';
+
+// Obtener el slug desde la URL
+const { slug } = Astro.params;
+
+// Validar que el slug exista y sea válido
+if (!slug || !(slug in services)) {
+  throw new Error(`Service '${slug}' not found.`);
+}
+
+// Usar el slug con tipo seguro
+const service = services[slug as keyof typeof services];
+const Page_Title = service.titlepage;
+
+// Function to generate static paths
+export async function getStaticPaths() {
+  return Object.keys(services).map((slug) => ({
+    params: { slug },
+  }));
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{Page_Title} | Artistic Embroidery</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="/assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/flaticon.min.css" />
+    <link rel="stylesheet" href="/assets/css/slick.min.css" />
+  </head>
+  <body>
+    <div class="preloader" id="preloader"></div>
+    <div class="page-wrapper">
+      <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+      </div>
+
+      <NavbarDos />
+      <ServiceDetails {...service} />
+      <CtaFinal />
+      <Footer />
+      <Scripts />
+    </div>
+  </body>
+</html>

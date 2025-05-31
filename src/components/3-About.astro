@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import aboutImage from '../assets/images/about/about-two.png';
+---
+
+<!-- About Area start -->
+<div class="about-area bgc-lighter mt-100 pb-30 rel z-1">
+  <div class="container-fluid">
+    <div class="about-two-feature bgc-black">
+      <div class="row justify-content-around pb-30">
+        <div class="col-lg-6 align-self-center">
+          <div class="about-content rmb-65 wow fadeInUp delay-0-2s" aria-labelledby="about-heading">
+            <span class="sub-title-two mb-35">Artistic Embroidery</span>
+            <div class="section-title text-white-title mb-30">
+              <h2 id="about-heading" role="heading" aria-level="2" aria-label="Tailored Stitching for Every Brand">Tailored Stitching for Every Brand</h2>
+            </div>
+            <p class="text-white">
+              We specialize in detailed embroidery, vibrant screen printing, and custom printing solutions that help
+              your identity stand out — on fabric, and beyond.
+            </p>
+            <div class="about-btns pt-5">
+              <a href="/how-it-works" class="theme-btn style-two" aria-label="Learn how Artistic Embroidery works">
+                Learn More<i class="fas fa-arrow-right"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=ETbQY9HJgiE"
+                class="mfp-iframe about-video-play mt-20"
+                aria-label="Play video explaining how it works"
+                role="button"
+                title="Watch our introduction video"
+              >
+                <i class="fas fa-play"></i>
+                <span class="sr-only">Play video</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 align-self-center">
+          <div class="about-two-image wow fadeInUp delay-0-4s">
+            <Image
+              src={aboutImage}
+              alt="Illustration representing artistic embroidery, screen printing, and custom branding services"
+              width={600}
+              height={500}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Area end -->
+</div>

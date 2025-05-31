@@ -1,0 +1,96 @@
+---
+
+import { Image } from 'astro:assets';
+import logo2 from '../assets/images/logos/logo-2.png';
+
+---
+
+
+
+<!-- footer area start -->
+<footer class="footer-area bgc-lighter-tree pt-40">
+  <h2 class="visually-hidden">Footer Section</h2>
+  <div class="container-fluid">
+    <div class="row justify-content-around">
+      <!-- LOGO -->
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+        <div class="widget widget_about wow fadeInUp delay-0-2s">
+          <div class="footer-logo mb-25 text-center text-lg-start">
+            <a href="index.html">
+              <Image src={logo2} alt="Artistic Embroidery Logo" loading="lazy" />
+            </a>
+          </div>
+          <p class="text-white">
+            At Artistic Embroidery, we transform garments into branding tools through custom embroidery, screen
+            printing, and apparel design.
+          </p>
+        </div>
+      </div>
+
+      <!-- USEFUL LINKS -->
+      <div class="col-xl-3 col-lg-3 col-sm-6 d-none d-sm-block">
+        <div class="widget widget_nav_menu wow fadeInUp delay-0-4s">
+          <h2 class="widget-title">Useful Links</h2>
+          <ul class="text-white">
+            <li><a href="/services/embroidery">Embroidery</a></li>
+            <li><a href="/services/screenPrinting">Screen Printing</a></li>
+            <li><a href="/businesscards.html">Business Cards</a></li>
+            <li><a href="/postcards.html">Postcards</a></li>
+            <li><a href="/banners.html">Banners</a></li>
+            <li><a href="/services/dtfPrinting">DTF</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="col-xl-4 col-lg-4 col-sm-6 col-12">
+        <div class="widget widget_contact_info wow fadeInUp delay-0-6s">
+          <h2 class="widget-title">Contact</h2>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=5+Elizabeth+St,+Paterson,+NJ+07503"
+                target="_blank">5 Elizabeth St, Paterson, NJ 07503</a
+              >
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:art4logo20@gmail.com">art4logo20@gmail.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+18622764283">(862) 276-4283</a>
+            </li>
+          </ul>
+          <div class="social-style-two mt-75 d-flex">
+            <a href="https://www.facebook.com/ArtisticEMBNJ/" target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/artisticembroiderynj/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- COPYRIGHT -->
+      <div class="footer-bottom mt-15 pt-25 pb-10">
+        <div class="row align-items-center">
+          <div class="col-lg-12 text-center">
+            <div class="copyright-text">
+              <p>
+                Designed by <a href="tel:+522201758149" aria-label="Call Isra Martinez, site designer">Isra Martinez</a> — Copyright &copy; <span id="current-year"
+                ></span>, All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

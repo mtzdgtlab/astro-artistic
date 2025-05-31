@@ -1,0 +1,89 @@
+---
+const { title, titlepage, Breadcumb, subtitle, titleText, tabs, images, alts } = Astro.props;
+const { descriptionTitle, description, usesTitle, uses, pricingTitle, pricing } = tabs;
+---
+
+<!-- Page Banner Start -->
+<section
+  class="page-banner bgs-cover text-white pt-65 pb-75"
+  style={`background-image: url('/assets/images/banner.jpg');`}
+>
+  <div class="container">
+    <div class="banner-inner">
+      <h1 class="page-title wow fadeInUp delay-0-2s" aria-label={titlepage}>{titlepage}</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+          <li class="breadcrumb-item">
+            <a href="home.html" aria-label="Go to homepage">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">{Breadcumb}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+<!-- Page Banner End --><!-- Product Details Start -->
+<h1 class="page-title wow fadeInUp delay-0-2s">{titlepage}</h1>
+<div class="container">
+  <div class="row align-items-center align-items-lg-start">
+    <div class="col-lg-5 col-9">
+      <div class="tab-content preview-images rmb-50 wow fadeInLeft delay-0-2s">
+        <div class="tab-pane fade preview-item active show" id="preview1">
+          <img src={images[0]} alt={alts[0]} loading="eager" />
+        </div>
+        <div class="tab-pane fade preview-item" id="preview2">
+          <img src={images[1]} alt={alts[1]} loading="eager" />
+        </div>
+        <div class="tab-pane fade preview-item" id="preview3">
+          <img src={images[2]} alt={alts[2]} loading="eager" />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-3">
+      <div class="nav flex-column thumb-images rmb-20">
+        <a href="#preview1" data-bs-toggle="tab" class="thumb-item active show" aria-label={`Thumbnail of ${alts[0]}`}>
+          <img src={images[0]} alt={alts[0]} loading="eager" />
+        </a>
+        <a href="#preview2" data-bs-toggle="tab" class="thumb-item" aria-label={`Thumbnail of ${alts[1]}`}>
+          <img src={images[1]} alt={alts[1]} loading="eager" />
+        </a>
+        <a href="#preview3" data-bs-toggle="tab" class="thumb-item" aria-label={`Thumbnail of ${alts[2]}`}>
+          <img src={images[2]} alt={alts[2]} loading="eager" />
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="product-details-content wow fadeInRight delay-0-2s">
+        <div class="section-title">
+          <h2>{title}</h2>
+        </div>
+        <hr class="mb-25" />
+        <p>{subtitle}</p>
+        <hr class="mt-30" />
+        <p>{titleText}</p>
+        <hr />
+      </div>
+    </div>
+  </div>
+  <ul class="nav nav-tabs product-information-tab mt-80 mb-40 wow fadeInUp delay-0-2s justify-content-center" role="tablist">
+    <li><a href="#details" data-bs-toggle="tab" class="active show" aria-label="View description tab">Description</a></li>
+    <li><a href="#information" data-bs-toggle="tab" aria-label="View ideal uses tab">Ideal Uses</a></li>
+    <li><a href="#vendorInfo" data-bs-toggle="tab" aria-label="View pricing tab">Pricing</a></li>
+  </ul>
+  <div class="tab-content pb-50 wow fadeInUp delay-0-2s service-details-content">
+    <div class="tab-pane fade show active" id="details" role="tabpanel">
+      <h3>{descriptionTitle}</h3>
+      <div set:html={description} />
+    </div>
+    <div class="tab-pane fade" id="information" role="tabpanel">
+      <h3>{usesTitle}</h3>
+      <div set:html={uses} />
+    </div>
+    <div class="tab-pane fade" id="vendorInfo" role="tabpanel">
+      <h3>{pricingTitle}</h3>
+      <div set:html={pricing} />
+    </div>
+  </div>
+</div>
+</section>
+<!-- Product Details End -->

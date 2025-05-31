@@ -1,0 +1,140 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<!-- FAQ Area start -->
+<div class="faq-area pb-75 bgc-lighter-two rel z-1" aria-labelledby="faq-heading" aria-label="Frequently Asked Questions Section">
+  <div class="container-fluid">
+    <h3 class="visually-hidden" role="heading" aria-level="3" aria-label="Client logos carousel">Client Logos</h3>
+    <div class="faq-client-slider p-50 mb-15">
+      {
+        Array.from({ length: 3 })
+          .flatMap(() => [
+            '/assets/images/client-logos/client-logo-1.png',
+            '/assets/images/client-logos/client-logo-2.png',
+            '/assets/images/client-logos/client-logo-3.png',
+            '/assets/images/client-logos/client-logo-4.png',
+            '/assets/images/client-logos/client-logo-5.png',
+          ])
+          .map((src, index) => (
+            <div class="faq-client-item" role="option" aria-selected="false">
+              <a href="/#client-logos" aria-label={`Client Logo ${index + 1}`}>
+                <img src={src} alt={`Logo ${index + 1}`} loading="lazy" />
+              </a>
+            </div>
+          ))
+      }
+    </div>
+  </div>
+
+  <div class="container-fluid px-lg-5">
+    <!-- Título y subtítulo centrados -->
+    <div class="row justify-content-around text-center mb-25">
+      <div class="col-12 mb-25">
+        <span class="sub-title-two mb-25 d-block">Got Questions?</span>
+        <div class="section-title text-white-title">
+          <h2 id="faq-heading" role="heading" aria-level="2" aria-label="Frequently Asked Questions">Frequently Asked Questions</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido dividido en dos columnas -->
+    <div class="row justify-content-around">
+      <!-- Preguntas -->
+      <div class="col-lg-6 d-flex align-items-center h-100">
+        <div class="faq-content rmb-65 wow fadeInUp delay-0-2s mb-4 mb-lg-0" id="faq-accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button role="option" aria-selected="false" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
+                What types of embroidery do you offer?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faq-accordion" aria-labelledby="headingOne">
+              <div class="accordion-body">
+                <p>
+                  We offer custom embroidery for logos, names, monograms, and more — ideal for uniforms, hats, jackets,
+                  and personalized gifts. Our state-of-the-art machines ensure clean, detailed stitching on a variety of
+                  fabrics.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button role="option" aria-selected="true" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
+                Do you provide screen printing as well?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion" aria-labelledby="headingTwo">
+              <div class="accordion-body">
+                <p>
+                  Yes, we specialize in high-quality screen printing for t-shirts, uniforms, promotional apparel, and
+                  more. Whether you need a few pieces or a large production run, we ensure vibrant, durable results
+                  every time.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button role="option" aria-selected="false" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
+                What is your turnaround time?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion" aria-labelledby="headingThree">
+              <div class="accordion-body">
+                <p>
+                  Turnaround times depend on order size and service type. Most embroidery and printing orders are
+                  completed within 5–7 business days. Rush service is available upon request.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button role="option" aria-selected="false" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-controls="collapseFour" aria-labelledby="headingFour">
+                Can I bring my own garments for customization?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion" aria-labelledby="headingFour">
+              <div class="accordion-body">
+                <p>
+                  Absolutely. We welcome customer-supplied items for embroidery or printing, provided they meet our
+                  material and quality standards. Please contact us beforehand so we can confirm compatibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center h-100">
+        <div class="faq-image position-relative" aria-label="FAQ Image">
+          <Image
+            src="/assets/images/faq/faq-image.png"
+            alt="Illustration representing frequently asked questions about custom embroidery and printing services"
+            class="wow fadeInUp delay-0-4s"
+            loading="lazy"
+            layout="constrained"
+            width={600}
+            height={500}
+          />
+          <div class="circle-square circle-green" aria-hidden="true">
+            <div class="shape-inner">
+              <span class="dot-one"></span>
+              <span class="dot-two"></span>
+              <span class="dot-three"></span>
+              <span class="dot-four"></span>
+              <span class="dot-five"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FAQ Area end -->
