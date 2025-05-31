@@ -1,0 +1,66 @@
+{
+  "piny.project_settings": {
+    "open-pages": [
+      "index.html"
+    ],
+    "urls": {
+      "index.html": {
+        "open-page-views": [
+          {
+            "w": 788,
+            "h": 0
+          }
+        ]
+      }
+    },
+    "ai-project-brief": null,
+    "tw-external-config": {},
+    "source-folders": null,
+    "preview-url": "http://localhost:4321",
+    "recent-classes": [
+      "w",
+      "h",
+      "0",
+      "1",
+      "3",
+      "p",
+      "d",
+      "u",
+      "l",
+      "f",
+      "-",
+      "r",
+      "e",
+      "i",
+      "a",
+      "t",
+      "n",
+      "o",
+      "c"
+    ],
+    "component-settings": {
+      "src/pages/index.astro:::Temp": {
+        "route": "/404",
+        "black-box": true
+      },
+      "src/pages/services.astro:::services": {
+        "route": "/services"
+      }
+    },
+    "app-routes": {
+      "routes": [
+        "/",
+        "/404",
+        "/actual-index",
+        "/banners",
+        "/businesscards",
+        "/cardoormagnets",
+        "/contact",
+        "/embroidery",
+        "/postcards",
+        "/services"
+      ],
+      "current_route": "/services"
+    }
+  }
+}
