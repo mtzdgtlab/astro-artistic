@@ -1,12 +1,9 @@
 ---
 import '../styles/style.css';
 import NavbarDos from '../components/1-NavbarDos.astro';
-import PageBanner from '../components/11-banner.astro';
 import CtaFinal from '../components/7-CtaFinal.astro';
 import Footer from '../components/8-Footer.astro';
 import Scripts from '../components/9-Scripts.astro';
-
-const titlepage = "Contact";
 ---
 
 <!doctype html>
@@ -38,8 +35,25 @@ const titlepage = "Contact";
       </div>
 
       <NavbarDos />
-
-      <PageBanner title="Contact" breadcrumb="Contact" />
+      <!-- Page Banner Start -->
+      <section
+        class="page-banner bgs-cover text-white pt-65 pb-75"
+        style={`background-image: url('/assets/images/banner.jpg');`}
+      >
+        <div class="container">
+            <div class="banner-inner">
+                <h2 class="page-title wow fadeInUp delay-0-2s">Contact Us</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb wow fadeInUp delay-0-4s">
+                        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                        <li class="breadcrumb-item active">Contact</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+      </section>
+      <!-- Page Banner End -->
+     
 
       <!-- Contact Feature Area start -->
       <section class="contact-feature pt-80 pb-50">
