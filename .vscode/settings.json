@@ -7,7 +7,7 @@
       "index.html": {
         "open-page-views": [
           {
-            "w": 788,
+            "w": 660,
             "h": 0
           }
         ]
@@ -58,6 +58,7 @@
         "/contact",
         "/embroidery",
         "/postcards",
+        "/robots.txt",
         "/services"
       ],
       "current_route": "/services"

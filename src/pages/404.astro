@@ -1,9 +1,11 @@
 ---
 import '../styles/style.css';
 import NavbarDos from '../components/1-NavbarDos.astro';
+import CtaFinal from '../components/7-CtaFinal.astro';
 import Footer from '../components/8-Footer.astro';
 import Scripts from '../components/9-Scripts.astro';
 ---
+
 
 <!doctype html>
 <html lang="en">
@@ -11,7 +13,7 @@ import Scripts from '../components/9-Scripts.astro';
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>Artistic Embroidery 404</title>
+    <title>Artistic Embroidery Services</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
@@ -24,39 +26,56 @@ import Scripts from '../components/9-Scripts.astro';
     <link rel="stylesheet" href="/assets/css/slick.min.css" />
   </head>
   <body>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader"></div>
+    <!-- preloader area end -->
     <div class="page-wrapper">
-      <!-- Preloader -->
-      <div class="preloader" id="preloader"></div>
-    </div>
-    <NavbarDos />
-    <!-- Error Page Start -->
-    <section class="error-page-area py-130">
-      <div class="container">
-        <div class="error-page-content text-center">
-          <div class="image mb-65 wow fadeInUp delay-0-2s">
-            <img src="assets/images/404.png" alt="404 Error" />
-          </div>
-          <div class="circle-square">
-            <div class="shape-inner">
-              <span class="dot-one"></span>
-              <span class="dot-two"></span>
-              <span class="dot-three"></span>
-              <span class="dot-four"></span>
-              <span class="dot-five"></span>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <div class="section-title wow fadeInUp delay-0-2s"></div>
-            </div>
-          </div>
-          <a href="home.html" class="theme-btn mt-15 wow fadeInUp delay-0-2s"
-            >Go To Home <i class="fas fa-arrow-right"></i></a
-          >
-        </div>
+      <!-- Back to Top -->
+      <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
       </div>
-    </section>
-    <!-- Error Page End -->
+
+    <NavbarDos />
+
+    <!-- Page Banner Start -->
+    <section
+    class="page-banner bgs-cover text-white pt-65 pb-75"
+    style={`background-image: url('/assets/images/banner.jpg');`}
+  >
+    <div class="container">
+        <div class="banner-inner">
+            
+        </div>
+    </div>
+  </section>
+  <!-- Page Banner End -->
+  <!-- Error Page Start -->
+  <section class="error-page-area py-130">
+    <div class="container">
+        <div class="error-page-content text-center">
+            <div class="image mb-65 wow fadeInUp delay-0-2s">
+                <img src="assets/images/404.png" alt="404 Erro">
+                <div class="circle-square circle-blue">
+                  <div class="shape-inner">
+                    <span class="dot-one"></span>
+                    <span class="dot-two"></span>
+                    <span class="dot-three"></span>
+                    <span class="dot-four"></span>
+                    <span class="dot-five"></span>
+                  </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Error Page End -->
+  <CtaFinal />
     <Footer />
     <Scripts />
   </body>
