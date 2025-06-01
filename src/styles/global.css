@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+@layer utilities {
+  .modal-backdrop {
+    background-color: #000244 !important;
+  }
+  .modal-backdrop.show {
+    opacity: 0.9 !important;
+    z-index: 1050 !important;
+  }
+  #successModal {
+    z-index: 1060 !important;
+  }
+  #successModal .modal-dialog,
+  #successModal .modal-content {
+    position: relative;
+    z-index: 1061 !important;
+  }
+}

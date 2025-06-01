@@ -10,14 +10,14 @@ import logo from '../assets/images/logos/logo.png';
     <div class="row justify-content-around">
       <div class="col-xl-6 col-lg-6 col-md-6 align-self-center d-none d-sm-block">
         <ul class="topbar-left justify-content-center justify-content-lg-start">
-          <li>
+          <li class="phone-number">
             <i class="icon fas fa-phone-volume"></i>
             <b>Call: <a href="tel:+18622764283">(862) 276-4283</a></b>
           </li>
         </ul>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6">
-        <ul class="topbar-right justify-content-center justify-content-lg-end">
+        <ul class="topbar-right justify-content-center justify-content-lg-end social-icons-wrapper">
           <li class="social-style-two">
             <a href="https://www.facebook.com/ArtisticEMBNJ/" target="_blank" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
@@ -46,7 +46,14 @@ import logo from '../assets/images/logos/logo.png';
     <!-- Logo -->
     <div class="logo">
       <a href="/">
-        <Image src={logo} alt="Artistic Embroidery Logo" width={120} height={60} loading="eager" />
+        <Image 
+          src={logo} 
+          alt="Artistic Embroidery Logo" 
+          width={199} 
+          height={121} 
+          loading="eager" 
+          class="w-full h-auto" 
+        />
       </a>
     </div>
 
@@ -69,21 +76,16 @@ import logo from '../assets/images/logos/logo.png';
         <li class="menu-item-has-children">
           <a href="/services/offsetPrinting" aria-label="View offset printing options">Offset Printing</a>
           <ul class="sub-menu text-dark">
-            <li><a href="/businesscards.html" aria-label="View business card printing service">Business Cards</a></li>
-            <li><a href="/postcards.html" aria-label="View postcard printing service">Postcards</a></li>
-            <li><a href="/banners.html" aria-label="View banner printing service">Banners</a></li>
-            <li><a href="/cardoormagnets.html" aria-label="View car door magnet printing service">Car Door Magnets</a></li>
+            <li><a href="/businesscards" aria-label="View business card printing service">Business Cards</a></li>
+            <li><a href="/postcards" aria-label="View postcard printing service">Postcards</a></li>
+            <li><a href="/banners" aria-label="View banner printing service">Banners</a></li>
+            <li><a href="/cardoormagnets" aria-label="View car door magnet printing service">Car Door Magnets</a></li>
           </ul>
         </li>
 
-        <li><a href="/contact.html" aria-label="Contact Artistic Embroidery">Contact</a></li>
+        <li><a href="/contact" aria-label="Contact Artistic Embroidery">Contact</a></li>
       </ul>
     </div>
-
-    <div class="nav-right-part nav-right-part-desktop d-none d-md-none d-sm-block d-lg-block">
-      <a href="/contact.html" class="theme-btn style-two" aria-label="Start your order with Artistic Embroidery">
-        Get Started <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
+    
   </div>
 </nav>

@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import ctaTwoImage from '../assets/images/cta/cta-two.png';
 ---
 
 <!-- CTA Two Area start -->
@@ -15,8 +16,8 @@ import { Image } from 'astro:assets';
           <a href="https://wa.me/18622764283" target="_blank" rel="noopener" class="theme-btn style-two mt-60 mb-60" aria-label="Start your project now via WhatsApp">
             Start Your Project Now <i class="fas fa-arrow-right"></i>
           </a>
-          <h3 class="visually-hidden" role="heading" aria-level="3" aria-label="Key business benefits">Key business benefits</h3>
-          <ul class="list-style-one text-white">
+          <h3 class="visually-hidden " role="heading" aria-level="3" aria-label="Key business benefits">Key business benefits</h3>
+          <ul class="list-style-one text-white hidden lg:block">
             <li>Over 10 Years of Experience</li>
             <li>Personalized Customer Service</li>
             <li>Extended Business Hours</li>
@@ -27,11 +28,12 @@ import { Image } from 'astro:assets';
       <div class="col-xl-7 col-lg-7 col-md-6 align-self-center order-1 order-md-2">
         <div class="cta-two-image rel z-1 wow fadeInRight delay-0-2s">
           <Image
-            src="/assets/images/cta/cta-two.png"
+            src={ctaTwoImage}
             alt="Illustration representing a business branding solution and call to action"
             layout="constrained"
-            width={700}
-            height={500}
+            width={795}
+            height={541}
+            class="w-full h-auto"
           />
           <div class="circle-square circle-yellow">
             <div class="shape-inner">

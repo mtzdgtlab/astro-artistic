@@ -7,11 +7,11 @@ import screenprinting2 from '../assets/images/footer/screenprinting-2.jpg';
 import dtf1 from '../assets/images/footer/dtf-1.jpg';
 
 const footerImages = [
-  { src: dtf1, label: 'DTF Work', href: '/dtf.html' },
-  { src: embroidery1, label: 'Embroidery', href: '/embroidery.html' },
-  { src: embroidery2, label: 'Embroidery', href: '/embroidery.html' },
-  { src: screenprinting1, label: 'Screen Printing', href: '/screen-printing.html' },
-  { src: screenprinting2, label: 'Screen Printing', href: '/screen-printing.html' }
+  { src: dtf1, label: 'DTF Work', href: '/services/dtfPrinting' },
+  { src: embroidery1, label: 'Embroidery', href: '/services/embroidery' },
+  { src: embroidery2, label: 'Embroidery', href: '/services/embroidery' },
+  { src: screenprinting1, label: 'Screen Printing', href: '/services/screenPrinting' },
+  { src: screenprinting2, label: 'Screen Printing', href: '/services/screenPrinting' }
 ];
 ---
 
@@ -22,7 +22,14 @@ const footerImages = [
     <div class="footer-top-projects">
       {footerImages.map((item, i) => (
         <div class={`footer-project-item wow fadeInUp delay-0-${2 + i}s`} role="option" aria-selected="false">
-          <Image src={item.src} alt={item.label} loading="lazy" />
+          <Image 
+            src={item.src} 
+            alt={item.label} 
+            loading="lazy" 
+            width={420} 
+            height={360} 
+            class="w-full h-auto" 
+          />
           <div class="content">
             <h6><a href={item.href} aria-label={`View project: ${item.label}`}>{item.label}</a></h6>
           </div>
@@ -31,5 +38,4 @@ const footerImages = [
     </div>
   </div>
 </div>
-
 <!-- Footer Top End -->

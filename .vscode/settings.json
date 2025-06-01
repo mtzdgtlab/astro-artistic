@@ -7,7 +7,7 @@
       "index.html": {
         "open-page-views": [
           {
-            "w": 660,
+            "w": 788,
             "h": 0
           }
         ]
@@ -61,7 +61,7 @@
         "/robots.txt",
         "/services"
       ],
-      "current_route": "/services"
+      "current_route": "/404"
     }
   }
 }

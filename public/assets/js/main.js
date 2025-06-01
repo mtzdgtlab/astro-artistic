@@ -11,44 +11,43 @@
         /**-----------------------------
  * Navbar toggle: hamburguesa + menú móvil
  * ---------------------------*/
+// Evita que los <a> con submenú redirijan (en todos los tamaños de pantalla)
+$('.navbar-area .navbar-nav li.menu-item-has-children > a').on('click', function (e) {
+  e.preventDefault();
+});
 
-// Evita comportamiento por defecto en submenús
-$(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children > a', function (e) {
+// Toggle hamburguesa y menú
+$('.navbar-area .menu.toggle-btn').on('click', function () {
+  $(this).toggleClass('open');
+  $('.navbar-area .navbar-collapse').toggleClass('sopen');
+});
+
+// Mobile submenu toggle
+if ($(window).width() < 992) {
+  $(".in-mobile").clone().appendTo(".sidebar-inner");
+  $(".in-mobile ul li.menu-item-has-children").append('<i class="fas fa-chevron-right"></i>');
+
+  $(".menu-item-has-children a").on('click', function () {
+    $(this).siblings('.sub-menu').animate({ height: "toggle" }, 300);
+  });
+}
+
+// Sidebar toggle (si lo usas)
+if ($('.menu-sidebar').length) {
+  $('.menu-sidebar button').on('click', function (e) {
     e.preventDefault();
+    $('body').toggleClass('side-content-visible');
   });
-  
-  // Toggle hamburguesa y menú
-  $('.navbar-area .menu.toggle-btn').on('click', function () {
-    $(this).toggleClass('open'); // Cambia a "X"
-    $('.navbar-area .navbar-collapse').toggleClass('sopen'); // Abre/cierra el menú
+
+  $('.hidden-bar .inner-box .cross-icon, .form-back-drop, .close-menu').on('click', function (e) {
+    e.preventDefault();
+    $('body').removeClass('side-content-visible');
   });
-  
-  // Mobile submenu toggle
-  if ($(window).width() < 992) {
-    $(".in-mobile").clone().appendTo(".sidebar-inner");
-    $(".in-mobile ul li.menu-item-has-children").append('<i class="fas fa-chevron-right"></i>');
-  
-    $(".menu-item-has-children a").on('click', function (e) {
-      $(this).siblings('.sub-menu').animate({ height: "toggle" }, 300);
-    });
-  }
-  
-  // Sidebar toggle (si lo usas)
-  if ($('.menu-sidebar').length) {
-    $('.menu-sidebar button').on('click', function (e) {
-      e.preventDefault();
-      $('body').toggleClass('side-content-visible');
-    });
-  
-    $('.hidden-bar .inner-box .cross-icon, .form-back-drop, .close-menu').on('click', function (e) {
-      e.preventDefault();
-      $('body').removeClass('side-content-visible');
-    });
-  
-    $('.fullscreen-menu .navigation li.dropdown > a').on('click', function () {
-      $(this).next('ul').slideToggle(500);
-    });
-  }
+
+  $('.fullscreen-menu .navigation li.dropdown > a').on('click', function () {
+    $(this).next('ul').slideToggle(500);
+  });
+}
          
               
         /*--------------------------------------------------
@@ -179,21 +178,23 @@ if ($('.footer-top-projects').length) {
             });
         }
 
-        
-        
-        /* -------------------------------------------------
-           Skillbar
-        ------------------------------------------------- */
-        if ($('.skillbar').length) {
-            $('.skillbar').appear(function () {
-                $('.skillbar').skillBars({
-                    from: 0,
-                    speed: 3000,
-                    interval: 100,
-                });
+        if ($('.video-play').length) {
+            $('.video-play').magnificPopup({
+              type: 'video',
             });
-        }
-
+          }
+          
+          if ($('.about-video-play').length) {
+            $('.about-video-play').magnificPopup({
+              type: 'video',
+            });
+          }
+          
+          if ($('.mfp-iframe').length) {
+            $('.mfp-iframe').magnificPopup({
+              type: 'iframe',
+            });
+          }
         
         
         /* -------------------------------------------------
@@ -206,8 +207,9 @@ if ($('.footer-top-projects').length) {
         /* -------------------------------------------------
          WOW Animation
         ------------------------------------------------- */
+          // @ts-ignore
         if ($('.wow').length) {
-            var wow = new WOW({
+            var wow = new WOW({ // @ts-ignore
                 boxClass: 'wow', // animated element css class (default is wow)
                 animateClass: 'animated', // animation css class (default is animated)
                 offset: 0, // distance to the element when triggering the animation (default is 0)

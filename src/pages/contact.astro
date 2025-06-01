@@ -45,7 +45,7 @@ import Scripts from '../components/9-Scripts.astro';
                 <h2 class="page-title wow fadeInUp delay-0-2s">Contact Us</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb wow fadeInUp delay-0-4s">
-                        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
                         <li class="breadcrumb-item active">Contact</li>
                     </ol>
                 </nav>
@@ -175,9 +175,10 @@ import Scripts from '../components/9-Scripts.astro';
               <form
                 id="contactForm"
                 class="contact-form z-1 rel"
-                action="assets/php/form-process.php"
+                action="https://formspree.io/f/xldnrqql"
+                method="POST"
                 name="contactForm"
-                method="post"
+                onsubmit="return handleSubmit(event)"
               >
                 <div class="block-title text-center mb-0">
                   <h2 class="section-title mb-30">Get in Touch</h2>
@@ -216,18 +217,28 @@ import Scripts from '../components/9-Scripts.astro';
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label for="phone"><i class="fas fa-phone-alt"></i></label>
-                      <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number" />
+                      <input 
+                        type="text" 
+                        id="phone" 
+                        name="phone" 
+                        class="form-control" 
+                        placeholder="Phone Number"
+                        required
+                        data-error="Please enter your phone number"
+                      />
+                      <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="col-sm-6 mb-30">
                     <div class="form-group">
                       <label for="subject"><i class="fas fa-question"></i></label>
-                      <select id="subject" name="subject" class="form-control">
-                        <option value="default" selected>Subject :</option>
+                      <select id="subject" name="subject" class="form-control" required data-error="Please select a subject">
+                        <option value="" selected disabled>Subject :</option>
                         <option value="product">Embroidery</option>
                         <option value="printing">Screen Printing</option>
                         <option value="design">Printing Service</option>
                       </select>
+                      <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="col-sm-12">
@@ -260,14 +271,79 @@ import Scripts from '../components/9-Scripts.astro';
                   </div>
                 </div>
               </form>
+              <div id="successMessage" style="display: none; color: white; text-align: center; background-color: #000244; padding: 20px; border-radius: 5px; margin-top: 20px;">
+                <h3 style="color: white;">Thank You!</h3>
+                <p style="color: white; margin-bottom: 0;">The form has been submitted successfully. We will contact you shortly.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Contact Form End -->
+
       <CtaFinal />
       <Footer />
       <Scripts />
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm') as HTMLFormElement;
+        const successMessageDiv = document.getElementById('successMessage');
+
+        if (form && successMessageDiv) {
+          form.addEventListener('submit', function(event: Event) {
+            event.preventDefault();
+            
+            // Validate required fields (optional, but good practice)
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+              const input = field as HTMLInputElement;
+              if (!input.value.trim()) {
+                isValid = false;
+                // Puedes agregar feedback visual aquí si lo deseas, por ejemplo, field.classList.add('is-invalid');
+              } else {
+                // Y quitarlo aquí: field.classList.remove('is-invalid');
+              }
+            });
+            
+            if (!isValid) {
+              alert('Please fill in all required fields.'); // O mostrar un mensaje más amigable en la página
+              return;
+            }
+
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            })
+            .then(response => {
+              if (response.ok) {
+                form.style.display = 'none'; // Ocultar el formulario
+                successMessageDiv.style.display = 'block'; // Mostrar el mensaje de éxito
+                
+                // Recargar la página después de 10 segundos
+                setTimeout(() => {
+                  window.location.reload();
+                }, 10000); // 10000 milisegundos = 10 segundos
+                
+              } else {
+                throw new Error('Network response was not ok');
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              alert('There was a problem submitting your form. Please try again.');
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>

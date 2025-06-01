@@ -1,29 +1,37 @@
 ---
 import { Image } from 'astro:assets';
+import faqImage from '../assets/images/faq/faq-image.png';
+import clientLogo1 from '../assets/images/client-logos/client-logo-1.png';
+import clientLogo2 from '../assets/images/client-logos/client-logo-2.png';
+import clientLogo3 from '../assets/images/client-logos/client-logo-3.png';
+import clientLogo4 from '../assets/images/client-logos/client-logo-4.png';
+import clientLogo5 from '../assets/images/client-logos/client-logo-5.png';
+
+const clientLogos = [clientLogo1, clientLogo2, clientLogo3, clientLogo4, clientLogo5];
+
 ---
 
 <!-- FAQ Area start -->
 <div class="faq-area pb-75 bgc-lighter-two rel z-1" aria-labelledby="faq-heading" aria-label="Frequently Asked Questions Section">
   <div class="container-fluid">
     <h3 class="visually-hidden" role="heading" aria-level="3" aria-label="Client logos carousel">Client Logos</h3>
-    <div class="faq-client-slider p-50 mb-15">
-      {
-        Array.from({ length: 3 })
-          .flatMap(() => [
-            '/assets/images/client-logos/client-logo-1.png',
-            '/assets/images/client-logos/client-logo-2.png',
-            '/assets/images/client-logos/client-logo-3.png',
-            '/assets/images/client-logos/client-logo-4.png',
-            '/assets/images/client-logos/client-logo-5.png',
-          ])
-          .map((src, index) => (
-            <div class="faq-client-item" role="option" aria-selected="false">
-              <a href="/#client-logos" aria-label={`Client Logo ${index + 1}`}>
-                <img src={src} alt={`Logo ${index + 1}`} loading="lazy" />
-              </a>
-            </div>
-          ))
-      }
+    <div class="faq-client-slider p-35 ">
+      {Array.from({ length: 3 })
+  .flatMap(() => clientLogos)
+  .map((src, index) => (
+    <div class="faq-client-item" role="option" aria-selected="false">
+      <a href="/#client-logos" aria-label={`Client Logo ${index + 1}`}>
+        <Image
+          src={src}
+          alt={`Logo ${index + 1}`}
+          width={600} 
+          height={202}
+          loading="lazy"
+          class="w-full h-auto"
+        />
+      </a>
+    </div>
+  ))}
     </div>
   </div>
 
@@ -115,13 +123,14 @@ import { Image } from 'astro:assets';
       <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center h-100">
         <div class="faq-image position-relative" aria-label="FAQ Image">
           <Image
-            src="/assets/images/faq/faq-image.png"
+          src={faqImage} 
             alt="Illustration representing frequently asked questions about custom embroidery and printing services"
             class="wow fadeInUp delay-0-4s"
             loading="lazy"
             layout="constrained"
-            width={600}
-            height={500}
+            width={580}
+            height={525}
+            class="w-full h-auto"
           />
           <div class="circle-square circle-green" aria-hidden="true">
             <div class="shape-inner">

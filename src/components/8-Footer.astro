@@ -1,7 +1,8 @@
 ---
 
 import { Image } from 'astro:assets';
-import logo2 from '../assets/images/logos/logo-2.png';
+import logo from '../assets/images/logos/logo.png';
+
 
 ---
 
@@ -16,8 +17,15 @@ import logo2 from '../assets/images/logos/logo-2.png';
       <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
         <div class="widget widget_about wow fadeInUp delay-0-2s">
           <div class="footer-logo mb-25 text-center text-lg-start">
-            <a href="index.html">
-              <Image src={logo2} alt="Artistic Embroidery Logo" loading="lazy" />
+            <a href="/">
+              <Image 
+                src={logo} 
+                alt="Artistic Embroidery Logo" 
+                width={199} 
+                height={121} 
+                loading="eager" 
+                class="w-full h-auto" 
+              />
             </a>
           </div>
           <p class="text-white">
@@ -34,9 +42,7 @@ import logo2 from '../assets/images/logos/logo-2.png';
           <ul class="text-white">
             <li><a href="/services/embroidery">Embroidery</a></li>
             <li><a href="/services/screenPrinting">Screen Printing</a></li>
-            <li><a href="/businesscards.html">Business Cards</a></li>
-            <li><a href="/postcards.html">Postcards</a></li>
-            <li><a href="/banners.html">Banners</a></li>
+            <li><a href="/businesscards">Business Cards</a></li>
             <li><a href="/services/dtfPrinting">DTF</a></li>
           </ul>
         </div>
