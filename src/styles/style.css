@@ -274,7 +274,7 @@ p {
 .tab-btns-one .nav-link .title {
   font-size: clamp(22px, 2vw, 29px);
   font-weight: 600;
-  color: #07c32a;
+  color: #000244;
   transition: color 0.3s ease;
 }
 
@@ -3402,7 +3402,7 @@ a.theme-btn.style-three:hover {
 
 .services-tab-area .tab-btns-one .nav-link {
   background-color: transparent !important;
-  color: #000 !important;
+  color: #0048f1 !important;
 }
 /* ↓ AQUI PON EL BLOQUE DE RESPONSIVE */
 @media (max-width: 788px) {
