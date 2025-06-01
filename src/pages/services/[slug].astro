@@ -6,6 +6,8 @@ import ServiceDetails from '../../components/15-ServiceDetails.astro';
 import CtaFinal from '../../components/7-CtaFinal.astro';
 import Footer from '../../components/8-Footer.astro';
 import Scripts from '../../components/9-Scripts.astro';
+import GoogleTags from '../../components/GoogleTags.astro';
+import GoogleNoscript from '../../components/GoogleNoscript.astro';
 
 // Obtener el slug desde la URL
 const { slug } = Astro.params;
@@ -30,6 +32,7 @@ export async function getStaticPaths() {
 <!doctype html>
 <html lang="en">
   <head>
+    <GoogleTags />
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
@@ -46,6 +49,7 @@ export async function getStaticPaths() {
     <link rel="stylesheet" href="/assets/css/slick.min.css" />
   </head>
   <body>
+    <GoogleNoscript />
     <div class="preloader" id="preloader"></div>
     <div class="page-wrapper">
       <div class="back-to-top">
